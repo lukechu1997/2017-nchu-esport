@@ -7,6 +7,15 @@ html(lang="en")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script(src='./js/main.js')
   body
+    #fb-root
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=232007807222361";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     .mobileHeader
       .dropdown
         .dropbtn MENU
@@ -17,14 +26,6 @@ html(lang="en")
               p 比賽規則
             .btn3
               p 名次獎品
-            .btn5
-              p 賽程表
-            .btn6
-              p 粉絲專頁
-            .btn7
-              p 贊助單位
-            .btn8
-              p 相關連結
     .main
       img.background(src='./img/Background.png')
       .left
@@ -45,49 +46,186 @@ html(lang="en")
           img.cover(src='./img/cover.png')
         .page1
           .textArea
-            h2 英雄聯盟正規賽(以下皆以16隊為基準)：
-
+            .title 英雄聯盟正規賽(以下皆以16隊為基準)：
+            ul
+              li 預賽採取小組循環賽模式，皆為線上賽，共分四組，組內將與其他隊伍進行一場BO1比賽，每組皆為四取二晉級。
+              li 八強賽採取單淘汰模式，皆為線上賽，共分四組，組內將其他隊伍進行依次BO3比賽，系列賽勝者晉級
+              li 四強賽採取單淘汰模式，皆為線上賽，共分四組，組內將其他隊伍進行依次BO3系列賽，系列賽勝者晉級
+              li 季殿賽採取單淘汰模式，為線上賽，將進行一次BO3系列賽，勝者為季軍
+              li 決賽採取單淘汰模式，為線下賽，決賽日期地點請觀看網站內部<決賽介紹>，將進行一次BO3系列賽，勝者為冠軍
+            .title 英雄聯盟中單大賽(以下皆以16隊為基準)：
+            ul
+              li 預賽採取單淘汰模式，皆為線上賽，共分八組，組內將進行一次BO1比賽，勝者晉級
+              li 八強賽採取單淘汰模式，皆為線上賽，共分四組，組內將其他隊伍進行一次BO1比賽，系列賽勝者晉級
+              li 四強賽採取單淘汰模式，皆為線上賽，共分四組，組內將其他隊伍進行一次BO1系列賽，系列賽勝者晉級
+              li 季殿賽採取單淘汰模式，為線上賽，將進行一次BO3系列賽，勝者為季軍
+              li 決賽採取單淘汰模式，為線下賽，決賽日期地點請觀看網站內部<決賽介紹>，將進行一次BO3系列賽，勝者為冠軍
           img.textBack(src='./img/content.png')
         .page2
           .textArea
-            h1 page2
+            .title 英雄聯盟正規賽
+            ol
+              li 比賽方法：5 對 5（團隊競賽，一隊5人）
+              li 比賽模式：Custom/Draft Mode(競賽模式)，藍紫隊，ban/pick順序由抽籤時一併決定。
+              li 比賽地圖：5 對 5 Summoner’s Rift (Summer) (召喚峽谷-夏)
+              li 比賽帳號:所有比賽選手均使用個人帳號。
+              li 比賽勝利判定標準：
+                ul
+                  li 摧毀敵方水晶主堡或迫使對方投降方獲勝。
+                  li 雙方選手需於比賽開始前10分鐘至比賽現場檢錄，測試電腦，如隊伍遲到10分鐘，官方人員有權給予判此遲到的比賽隊伍棄權。
+              li 斷線處理：
+                ul 
+                  li 中離或故意斷線：在裁判的判斷下，認為因選手的動作導致遊戲斷線，則判定該選手為輸的一方或繼續比賽。
+                  li 如在對戰開始3分鐘內未發生首殺且雙方選手有一人產生斷線狀況，則官方人員有權決定比賽是否重新開始。
+                  li 比賽開始3分鐘後發生當機狀況，比賽照常進行。請當機玩家儘快回復連線，回到遊戲中。
+                  li 如選手故意離開遊戲，比賽照常進行。
+              li 不正當比賽行為如下：
+                ul 
+                  li 使用任何外掛程式（如開啟全地圖）故意製造斷線 ，或使用不符合比賽規則的遊戲設定或Bug。
+                  li 比賽進行中不允許任何非必要的聊天行為，如發送挑釁用語、任何違反運動家精神的行為、由官方人員認定任何不正當的訊息、明顯地讓對手贏得比賽等。
+                  li 任何選手被發現進行不公平或不正當比賽時，當事選手在經過官方人員慎重裁決的情況下，將收到警告或判為輸方的處罰。在特別嚴重的情況下，將被逐出本次比賽。
+            .title 英雄聯盟中路單挑大賽
+            ol
+              li 比賽方法：1 對 1
+              li 比賽模式：Custom/Draft Mode(競賽模式)，藍紫隊，ban/pick順序由抽籤時一併決定。
+              li 比賽地圖：5 對 5 Summoner’s Rift (Summer) (召喚峽谷-夏)(僅使用中路及部分野區)
+              li 比賽帳號:所有比賽選手均使用個人帳號。
+              li 比賽勝利判定標準：
+                ul
+                  li 獲得首殺者勝利
+                  li 吃兵數先達到100者勝利
+                  li 首先摧毀敵方中路防禦塔者勝利
+                  li 雙方選手需於比賽開始前10分鐘至比賽現場檢錄，測試電腦，如隊伍遲到10分鐘，官方人員有權給予判此遲到的比賽隊伍棄權。
+              li 斷線處理：
+                ul 
+                  li 中離或故意斷線：在裁判的判斷下，認為因選手的動作導致遊戲斷線，則判定該選手為輸的一方或繼續比賽。
+                  li 如在對戰開始3分鐘內未發生首殺且雙方選手有一人產生斷線狀況，則官方人員有權決定比賽是否重新開始。
+                  li 比賽開始3分鐘後發生當機狀況，比賽照常進行。請當機玩家儘快回復連線，回到遊戲中。
+                  li 如選手故意離開遊戲，比賽照常進行。
+              li 不正當比賽行為如下：
+                ul
+                  li 使用任何外掛程式（如開啟全地圖）故意製造斷線 ，或使用不符合比賽規則的遊戲設定或Bug。
+                  li 比賽進行中不允許任何非必要的聊天行為，如發送挑釁用語、任何違反運動家精神的行為、由官方人員認定任何不正當的訊息、明顯地讓對手贏得比賽等。
+                  li 任何選手被發現進行不公平或不正當比賽時，當事選手在經過官方人員慎重裁決的情況下，將收到警告或判為輸方的處罰。在特別嚴重的情況下，將被逐出本次比賽。
           img.textBack(src='./img/content.png')
         .page3
           .textArea
-            h1 page3
+            table
+              tr
+                th 英雄聯盟正規賽
+                th 獎金
+                th 獎品
+              tr
+                td 冠軍
+                td 1500
+                td 水晶獎盃一座+750聯盟幣/人
+              tr
+                td 亞軍
+                td 1000
+                td 450聯盟幣/人
+              tr
+                td 季軍
+                td 500
+                td 300聯盟幣/人
+              tr
+                td 參加獎
+                td -
+                td 幸運轉盤
+              tr
+                th 英雄聯盟中單大賽
+                th
+                th 
+              tr
+                td 冠軍
+                td 500
+                td 750聯盟幣/人
+              tr
+                td 亞軍
+                td 300
+                td 450聯盟幣/人
+              tr
+                td 季軍
+                td -
+                td 300聯盟幣/人
+              tr
+                td 參加獎
+                td -
+                td 幸運轉盤
           img.textBack(src='./img/content.png')
         .page4
           img.textBack(src='./img/content.png')
           .tag
-            button.single
+            .single
               p 中路單挑大賽
-            button.multi
+            .multi
               p 正規賽
           iframe.singleForm(src='https://docs.google.com/forms/d/e/1FAIpQLSdpOzbnoG_TIdjFyJdmHayvBtCNhipFXpTz2iecIioLRp3zqA/viewform?usp=sf_link')
           iframe.multiForm(src='https://docs.google.com/forms/d/e/1FAIpQLSfbe5WH8SCC74Re03nHsQWkjIYtE3IaT8-nxwmv6qr5agFveg/viewform?embedded=true')
         .page5
           .textArea          
-            h1 page5
+            p 本次比賽正規賽的費用為300/隊
+              br
+              | 中路單挑大賽的費用為50/人
+              br
+              br
+              | 本次賽事繳費主要是以匯款的方式
+              br
+              | 匯款帳戶：00214690256520
+              br
+              | 匯款完畢後請連絡粉絲專頁
+              br
+              br
+              | 若匯款上有困難，請私訊粉絲專頁
           img.textBack(src='./img/content.png')
         .page6
           .textArea 
-            h1 page6
+            h2 敬請期待，待報名結束會盡速公佈
           img.textBack(src='./img/content.png')
         .page7
           .textArea 
-            h1 page7
+            .fb-page(data-href='https://www.facebook.com/GarenaNCHU', data-tabs='timeline', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+              blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/GarenaNCHU')
+                a(href='https://www.facebook.com/GarenaNCHU') 興希望x校園電競-中興大學校際盃
+
           img.textBack(src='./img/content.png')
         .page8
           .textArea 
-            h1 page8
+            h1 Acer Predator
+            img(src='./img/predator-logo.png')
           img.textBack(src='./img/content.png')
         .page9
           .textArea 
-            h1 page9
+            p Garena 官方網站：
+            a(href='https://www.garena.tw/') https://www.garena.tw/
+            p Acer 官方網站
+            a(href='https://www.acer.com/ac/zh/TW/content/home') https://www.acer.com/ac/zh/TW/content/home
           img.textBack(src='./img/content.png')
         .page10
           .textArea 
-            h1 page10
+            h3 決賽地點：中興大學小禮堂
+            h3 決賽時間：17：30入場，18：00開始
+            h3 決賽流程：
+            table
+              tr
+                th 時間
+                th 活動
+                th 備註
+              tr
+                td 17：30
+                td 開放觀眾入場
+                td 入場時填寫抽獎卷
+              tr
+                td 18：00~21：00
+                td 正規賽5V5
+                td 場跟場之間會有現場抽獎，視情況決定是否有賽後訪問。
+              tr
+                td 21：00~21：45
+                td 中路單挑大賽
+                td
+              tr
+                td 21：45~22：00
+                td 頒獎
+                td
           img.textBack(src='./img/content.png')
       .right
         .list
@@ -101,4 +239,9 @@ html(lang="en")
         .list
           img.btn10(src='./img/blueSUP1.png')
         .footer
+          .myText
+            p 
+              | © 2017 by 
+              span
+              a(href='https://github.com/lukechu1997')  Luke
           img.logos(src='./img/右下.png')

@@ -1,6 +1,5 @@
 $(document).ready( () => {
   var page = 0
-  $('.page0').show()
   $('.btn1').click( () => {
     $('.page'+page).hide()
     $('.page1').show()
@@ -54,10 +53,13 @@ $(document).ready( () => {
   $('.single').click( () => {
     $('.multiForm').hide()
     $('.singleForm').show()
+    $('.multi').css({'opacity': '1'})
+    $('.single').css({'opacity': '0.5'})
   })
   $('.multi').click( () => {
     $('.singleForm').hide()
     $('.multiForm').show()
+    $('.single').css({'opacity': '1'})
   })
   $('.dropbtn').click( () => {
     $('.dropdown-content').toggle("slow")

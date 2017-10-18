@@ -1,0 +1,282 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px;
+  font-size: 14px;
+}
+.main {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+.main .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.left {
+  width: 25%;
+  height: 100%;
+  flex-direction: column;
+}
+.left .list {
+  height: 15%;
+  text-align: center;
+}
+.left .list .btn1 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.left .list .btn2 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.left .list .btn3 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.left .list .btn4 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.left .list .btn5 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.left .footer {
+  height: 25%;
+  text-align: center;
+}
+.left .footer .logos {
+  width: 100%;
+  height: 100%;
+}
+.middle {
+  width: 50%;
+  height: 100%;
+}
+.middle .textBack {
+  padding: 15px;
+  width: 48%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+.middle .textArea {
+  font-size: 1rem;
+  margin: 1rem;
+}
+.middle .page0 {
+  overflow: auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.middle .page0 .cover {
+  width: 100%;
+  height: 90%;
+}
+.middle .page1 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page2 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page3 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page4 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page4 .tag {
+  width: 100%;
+  height: 10%;
+  display: inline-flex;
+  padding-top: 15px;
+  position: fixed;
+}
+.middle .page4 .tag .single {
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+.middle .page4 .tag .multi {
+  width: 10%;
+  height: 100%;
+  text-align: center;
+  background-color: blue;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+.middle .page4 .singleForm {
+  display: none;
+}
+.middle .page4 .multiForm {
+  display: none;
+}
+.middle .page4 iframe {
+  width: 100%;
+  height: 100%;
+}
+.middle .page5 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page6 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page7 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page8 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page9 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.middle .page10 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.right {
+  width: 25%;
+  height: 100%;
+  flex-direction: column;
+}
+.right .list {
+  height: 15%;
+  text-align: center;
+}
+.right .list .btn6 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.right .list .btn7 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.right .list .btn8 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.right .list .btn9 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.right .list .btn10 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.right .footer {
+  height: 25%;
+  text-align: center;
+}
+.right .footer .logos {
+  width: 100%;
+  height: 100%;
+}
+.mobileHeader {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+  }
+  .main {
+    background-color: black;
+  }
+  .main .background {
+    display: none;
+  }
+  .left,
+  .right {
+    display: none;
+  }
+  .middle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: black;
+  }
+  .middle .textBack {
+    width: 90%;
+    height: 95%;
+    z-index: 2;
+  }
+  .middle .textArea {
+    z-index: 3;
+    position: absolute;
+  }
+  .middle .page0 .cover {
+    width: 100%;
+    height: 100%;
+  }
+  .middle .page1 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+  .mobileHeader {
+    width: 100%;
+    display: block;
+    color: white;
+    z-index: 10;
+    position: absolute;
+  }
+  .mobileHeader .dropdown {
+    display: inline-block;
+    padding: 10px;
+  }
+  .mobileHeader .dropdown .dropbtn {
+    background-color: #6F6F6F;
+    opacity: 0.5;
+    font-size: 1.5rem;
+  }
+  .mobileHeader .dropdown .dropbtn .dropdown-content {
+    display: none;
+    z-index: 10;
+  }
+  .mobileHeader .dropdown .dropbtn .dropdown-content .btn {
+    display: block;
+    text-align: center;
+  }
+}

@@ -19,6 +19,35 @@ body {
   height: 100%;
   z-index: -10;
 }
+.animation {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+.animation .animeArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+.animation .animeArea .front {
+  position: absolute;
+  z-index: 2;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+.animation .animeArea .back {
+  backface-visibility: hidden;
+  position: absolute;
+  transform: rotateY(180deg);
+}
 .left {
   width: 25%;
   height: 100%;
@@ -76,7 +105,7 @@ body {
 .middle .textArea {
   overflow: auto;
   font-size: 1rem;
-  margin: 2rem;
+  margin: 1.5rem 2.7rem;
   height: 89%;
 }
 .middle .textArea .title {
@@ -184,6 +213,11 @@ body {
 .middle .page7 .textArea {
   display: flex;
   justify-content: center;
+}
+.middle .page7 .textArea .fb-page {
+  box-shadow: 1px 1px 1px 1px #c09022;
+  height: 500px;
+  top: 15%;
 }
 .middle .page8 {
   width: 100%;
@@ -303,7 +337,6 @@ body {
   .middle .page1 {
     width: 100%;
     height: 100%;
-    background-color: black;
   }
   .mobileHeader {
     width: 100%;

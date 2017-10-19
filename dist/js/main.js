@@ -2,6 +2,7 @@ $(document).ready( () => {
   var page = 0
   $('.btn1').click( () => {
     $('.page'+page).hide()
+    // $('.animation').css({'display': 'flex'})
     $('.page1').show()
     page = 1;
   })

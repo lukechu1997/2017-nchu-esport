@@ -301,6 +301,9 @@ body {
   bottom: 0px;
   left: 84%;
 }
+.right .footer .myText a {
+  color: #CD3131;
+}
 .mobileHeader {
   display: none;
 }
@@ -369,20 +372,5 @@ body {
   .mobileHeader .dropdown .dropbtn .dropdown-content .btn {
     display: block;
     text-align: center;
-  }
-}
-@keyframes anime {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  75% {
-    transform: rotateY(180deg);
-    transform: scale(1.6);
   }
 }
